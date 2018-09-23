@@ -1,9 +1,20 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-div {
-    padding: 0px 0px 0px 20px;
-    color: green;
-    font-size: 150%;
 
+p {
+  padding-left: 15px;
+  padding-right: 10px;
+  font-size: 25px;
+  // font-family: 'Merriweather', serif;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 800;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+mat-toolbar {
+  height: 40px;
 }
 
 .fill-remaining-space {
