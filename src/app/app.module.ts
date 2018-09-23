@@ -4,7 +4,7 @@ import { MaterialModule } from './material';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavibarComponent } from './navibar/navibar.component';
-// import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { SignupComponent } from './signup/signup.component';
 
@@ -17,7 +17,7 @@ import { SignupComponent } from './signup/signup.component';
   ],
   imports: [
     BrowserModule,
-    //BrowserAnimationsModule,
+    BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
     MaterialModule
