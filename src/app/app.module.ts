@@ -9,6 +9,7 @@ import {MatButtonModule, MatCheckboxModule, MatDialogModule} from '@angular/mate
 import { SignupComponent } from './signup/signup.component';
 import {FormsModule} from '@angular/forms';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProjectsComponent } from './projects/projects.component';
     HomeComponent,
     NavibarComponent,
     SignupComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
