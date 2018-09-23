@@ -6,12 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { NavibarComponent } from './navibar/navibar.component';
 // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavibarComponent
+    NavibarComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
