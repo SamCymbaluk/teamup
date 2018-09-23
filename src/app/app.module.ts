@@ -10,6 +10,13 @@ import { SignupComponent } from './signup/signup.component';
 import {FormsModule} from '@angular/forms';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectComponent } from './project/project.component';
+import {RouterModule, Routes} from '@angular/router';
+import { HomepageComponent } from './homepage/homepage.component';
+
+const appRoutes: Routes = [
+  {path: 'ideas', component: ProjectsComponent },
+  {path: '', component: HomepageComponent }
+];
 
 @NgModule({
   declarations: [
@@ -18,7 +25,8 @@ import { ProjectComponent } from './project/project.component';
     NavibarComponent,
     SignupComponent,
     ProjectsComponent,
-    ProjectComponent
+    ProjectComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,8 @@ import { ProjectComponent } from './project/project.component';
     MatCheckboxModule,
     FormsModule,
     MatDialogModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule.forRoot(appRoutes)
   ],
   entryComponents: [
     SignupComponent
