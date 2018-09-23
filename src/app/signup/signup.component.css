@@ -1,0 +1,13 @@
+.signup-frame {
+  text-align: center;
+}
+
+mat-form-field {
+  width: 80%;
+}
+
+.checkbox-group {
+  text-align: left;
+  width: 30%;
+  margin: auto;
+}
