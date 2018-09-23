@@ -1,24 +1,51 @@
 <div class="signup-frame">
   <h3>Create Account</h3>
   <mat-form-field>
-    <input matInput placeholder="Name">
+    <input matInput placeholder="Name" [(ngModel)]="name">
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Location">
+    <input matInput placeholder="Location" [(ngModel)]="location">
   </mat-form-field>
   <mat-form-field class="chip-list">
-    <mat-chip-list #chipList>
+    <mat-chip-list #interestList>
       <mat-chip *ngFor="let interest of interests" [selectable]="selectable"
-                [removable]="removable" (removed)="remove(interest)">
+                [removable]="removable" (removed)="removeInterest(interest)">
         {{interest}}
         <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
       </mat-chip>
-      <input placeholder="New interest..."
-             [matChipInputFor]="chipList"
+      <input placeholder="Interests"
+             [matChipInputFor]="interestList"
              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
              [matChipInputAddOnBlur]="addOnBlur"
-             (matChipInputTokenEnd)="add($event)">
+             (matChipInputTokenEnd)="addInterest($event)">
     </mat-chip-list>
   </mat-form-field>
+
+  <mat-form-field class="chip-list">
+    <mat-chip-list #skillList>
+      <mat-chip *ngFor="let skill of skills" [selectable]="selectable"
+                [removable]="removable" (removed)="removeSkill(skill)">
+        {{skill}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input placeholder="Skills"
+             [matChipInputFor]="skillList"
+             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+             [matChipInputAddOnBlur]="addOnBlur"
+             (matChipInputTokenEnd)="addSkill($event)">
+    </mat-chip-list>
+  </mat-form-field>
+  <br>
+
+  <div class="checkbox-group">
+    <mat-checkbox [(ngModel)]="data.ideas">I have Ideas</mat-checkbox>
+    <br>
+    <mat-checkbox [(ngModel)]="data.skills">I have Skills</mat-checkbox>
+    <br>
+    <mat-checkbox [(ngModel)]="data.sponsor">I would like to Sponsor</mat-checkbox>
+  </div>
+
+  <br>
+  <button mat-raised-button color="primary" matDialogClose>Create Account</button>
 
 </div>
